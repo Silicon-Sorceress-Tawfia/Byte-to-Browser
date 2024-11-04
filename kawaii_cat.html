@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaii Gliding Cat</title>
+    <style>
+        /* Basic reset */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            overflow: hidden;
+        }
+
+        /* Container to hold the entire cat */
+        .cat {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            transform: translateY(-50%);
+            animation: glide 5s linear infinite;
+        }
+
+        /* Head of the cat */
+        .cat-head {
+            width: 80px;
+            height: 80px;
+            background-color: #ffc0cb;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        /* Ears of the cat */
+        .cat-ear {
+            width: 30px;
+            height: 30px;
+            background-color: #ffc0cb;
+            position: absolute;
+            top: -20px;
+            border-radius: 50%;
+        }
+        .cat-ear.left {
+            left: -10px;
+            transform: rotate(-45deg);
+        }
+        .cat-ear.right {
+            right: -10px;
+            transform: rotate(45deg);
+        }
+
+        /* Eyes of the cat */
+        .cat-eye {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 30px;
+        }
+        .cat-eye.left {
+            left: 20px;
+        }
+        .cat-eye.right {
+            right: 20px;
+        }
+
+        /* Mouth */
+        .cat-mouth {
+            width: 20px;
+            height: 10px;
+            background-color: black;
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Keyframes for sliding animation */
+        @keyframes glide {
+            0% {
+                transform: translate(-100px, -50%);
+            }
+            50% {
+                transform: translate(calc(100vw + 100px), -50%);
+            }
+            100% {
+                transform: translate(-100px, -50%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Kawaii Cat Structure -->
+    <div class="cat">
+        <div class="cat-head">
+            <div class="cat-ear left"></div>
+            <div class="cat-ear right"></div>
+            <div class="cat-eye left"></div>
+            <div class="cat-eye right"></div>
+            <div class="cat-mouth"></div>
+        </div>
+    </div>
+
+</body>
+</html>
